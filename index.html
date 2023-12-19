@@ -21,30 +21,56 @@
 
 </head>
 <body>
-    <div>
-        <label for="input-name-surname">Nome Cognome</label>
-        <input class="form-control" type="text" id="input-name-surname" name="userNameSurname" placeholder="Inserisci Nome e Cognome">
-    </div>
 
-    <div>
-        <label for="user-kilometres">Km da percorrere</label>
-        <input class="form-control" type="number" id="user-kilometres" name="userKilometres" placeholder="Inserisci Km da percorrere">
-    </div>
+    <!-- Main -->
+    <main>
+        <div class="container">
 
-    <div>
-        <label for="user-age">Fascia d'età</label>
-        <input class="form-control" type="number" id="user-age" name="userAge" placeholder="Inserisci l'età">
-    </div>
+            <!-- Sezione input ticket -->
+            <section id="info-ticket">
+                <h1 class="text-white text-center py-3">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
 
-    <button type="button" id="button-generate" class="btn btn-primary">Genera</button>
-    <button type="button" id="button-cancel" class="btn btn-primary">Annulla</button>
+                <!-- Form -->
+                <form action="https://marcolanci.it/boolean/read_form.php" method="GET">
+                    <div class="card input-ticket">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-4 d-flex justify-content-center">
+                                    <div class="input-form">
+                                        <label class="mb-2 fs-5" for="input-name-surname">Nome Cognome</label>
+                                        <input class="form-control text-center" type="text" id="input-name-surname" name="userNameSurname" placeholder="Inserisci Nome e Cognome">
+                                    </div>
+                                </div>
+                                <div class="col-4 d-flex justify-content-center">
+                                    <div class="input-form">
+                                        <label class="mb-2 fs-5" for="user-kilometres">Km da percorrere</label>
+                                        <input class="form-control text-center" type="number" id="user-kilometres" name="userKilometres" placeholder="Inserisci Km da percorrere">
+                                    </div>
+                                </div>
+                                <div class="col-4 d-flex justify-content-center">
+                                    <div class="input-form">
+                                        <label class="mb-2 fs-5" for="user-age">Fascia d'età</label>
+                                        <input class="form-control text-center" type="number" id="user-age" name="userAge" placeholder="Inserisci l'età">
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="col-12 d-flex justify-content-center mt-5 gap-4">
+                                    <button type="button" id="button-generate" class="btn btn-primary fs-5">Genera</button>
+                                    <button type="button" id="button-cancel" class="btn btn-primary fs-5">Annulla</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
 
-    <div id="type-ticket"></div>
-    <div id="result-name-surname"></div>
-    <div id="number-train"></div>
-    <div id="number-ticket"></div>
-    <div id="result-price"></div>
+            <div id="type-ticket"></div>
+            <div id="result-name-surname"></div>
+            <div id="number-train"></div>
+            <div id="number-ticket"></div>
+            <div id="result-price"></div>
 
-
+        </div>
+    </main>
 </body>
 </html>
