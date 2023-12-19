@@ -29,3 +29,7 @@ if (errorMessage) {
     } else if (inputAge > 65) {
         totalPrice = totalPrice - discount40;
     }
+
+    // Prezzo finale (con massimo due decimali)
+    totalPrice = totalPrice.toFixed(2);
+}
