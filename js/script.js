@@ -8,6 +8,7 @@ const resultPrice = document.getElementById('result-price');
 const resultNameSurname = document.getElementById('result-name-surname');
 const numberTrain = document.getElementById('number-train');
 const numberTicket = document.getElementById('number-ticket');
+let typeTicket = document.getElementById('type-ticket');
 
 // Mi metto in ascolto del click sul bottone
 buttonGenerate.addEventListener('click', function(){
@@ -29,6 +30,8 @@ buttonGenerate.addEventListener('click', function(){
         alert(errorMessage);
     } else {
 
+        typeTicket.innerText = 'Biglietto Standard';
+
         let totalPrice = userNumberKilometres * 0.21;
 
         // Sconto del 20% per gli under 18 e del 40% per gli over 65
@@ -39,8 +42,10 @@ buttonGenerate.addEventListener('click', function(){
 
         if (userNumberAge < 18) {
             totalPrice = totalPrice - discount20;
+            typeTicket.innerText = 'Biglietto Junior';
         } else if (userNumberAge > 65) {
             totalPrice = totalPrice - discount40;
+            typeTicket.innerText = 'Biglietto Senior';
         }
 
         // Prezzo finale (con massimo due decimali)
@@ -60,7 +65,8 @@ buttonGenerate.addEventListener('click', function(){
         resultPrice.classList.add('d-none'); 
         resultNameSurname.classList.add('d-none');      
         numberTrain.classList.add('d-none');      
-        numberTicket.classList.add('d-none');           
+        numberTicket.classList.add('d-none'); 
+        typeTicket.classList.add('d-none');          
     })
     
 })
