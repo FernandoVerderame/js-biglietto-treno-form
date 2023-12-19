@@ -51,4 +51,17 @@ buttonGenerate.addEventListener('click', function(){
         numberTrain.innerText = randomNumberTrain;
         numberTicket.innerText = randomNumberTicket;
     }
+
+    buttonCancel.addEventListener('click', function(){
+
+        inputNameSurname.value = '';
+        inputKilometres.value = '';
+        inputAge.value = '';  
+        resultPrice.classList.add('d-none'); 
+        resultNameSurname.classList.add('d-none');      
+        numberTrain.classList.add('d-none');      
+        numberTicket.classList.add('d-none');           
+    })
+    
 })
+
