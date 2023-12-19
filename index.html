@@ -28,7 +28,7 @@
 
             <!-- Sezione input ticket -->
             <section id="info-ticket">
-                <h1 class="text-white text-center py-3">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+                <h1 class="text-white text-center pb-3 mt-5">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
 
                 <!-- Form -->
                 <form action="https://marcolanci.it/boolean/read_form.php" method="GET">
@@ -63,11 +63,37 @@
                 </form>
             </section>
 
-            <div id="type-ticket"></div>
-            <div id="result-name-surname"></div>
-            <div id="number-train"></div>
-            <div id="number-ticket"></div>
-            <div id="result-price"></div>
+            <!-- Sezione biglietto stampato -->
+            <section id="print-ticket">
+                <h2 class="text-white text-center mb-3">IL TUO BIGLIETTO</h2>
+                <div class="card ticket rounded-0 py-4 px-4">
+                    <h3 class="fs-4">DETTAGLIO PASSEGGERI</h3>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-3">
+                                <h4 class="mb-3">NOME PASSEGGERO</h4>
+                                <div id="result-name-surname" class="fs-5"></div>
+                            </div>
+                            <div class="col-3"> 
+                                <h5 class="">Offerta</h5>  
+                                <div id="type-ticket"></div>
+                            </div>
+                            <div class="col-2">
+                                <h5 class="">Carrozza</h5>  
+                                <div id="number-train"></div>
+                            </div>
+                            <div class="col-2">
+                                <h5 class="">Codice CP</h5>  
+                                <div id="number-ticket"></div>
+                            </div>
+                            <div class="col-2">
+                                <h5 class="">Costo Biglietto</h5>  
+                                <div id="result-price"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
         </div>
     </main>

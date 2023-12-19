@@ -8,6 +8,25 @@ h1 {
     font-weight: 700;
 }
 
+h2 {
+    font-size: 38px;
+    font-weight: 700;
+    margin-top: 120px;
+}
+
+h3 {
+    font-weight: 700;
+}
+
+h4 {
+    font-weight: 700;
+}
+
+h5 {
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
 /* Form */
 form .input-form {
     text-align: center;
@@ -23,4 +42,12 @@ form label {
 .card.input-ticket {
     padding: 20px 120px;
     border-radius: 15px;
+}
+
+/* Sezione biglietto stampato */
+.card.ticket .card-body {
+    background-color: #C49F4E;;
+    height: 150px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
