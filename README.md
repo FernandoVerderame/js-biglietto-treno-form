@@ -21,3 +21,28 @@ BONUS
 - Usare una select per inserire l'età
 - Stampare sul biglietto un numero di carrozza e un numero di biglietto casuali
 Buon divertimento!
+
+
+
+# SCALETTA
+
+1. Prendo gli elementi dal DOM
+2. Costruiamo il messaggio
+3. Chiedere all'utente il numero di chilometri da percorrere
+4. Chiedere all'utente l'età
+5. Calcolare il prezzo totale del viaggio
+6. Prezzo finale (con massimo due decimali)
+7. Inseriamo i risultati negli elementi HTML
+
+
+# MILESTONE 1
+1. Implementiamo il programma negli input e nel button
+2. Mi metto in ascolto del click del bottone
+3. Randomizzo il numero della carrozza e del biglietto 
+4. Stampiamo le risposte in console 
+
+
+# MILESTONE 2 
+Realizziamo un form in pagina 
+
+
