@@ -33,29 +33,32 @@
                 <!-- Form -->
                 <form action="https://marcolanci.it/boolean/read_form.php" method="GET">
                     <div class="card input-ticket">
+                        <div class="platform">
+                            <img src="img/platform.png" alt="platform">
+                        </div>
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-4 d-flex justify-content-center">
                                     <div class="input-form">
-                                        <label class="mb-2 fs-5" for="input-name-surname">Nome Cognome</label>
+                                        <label class="mb-2 fs-5 text-black" for="input-name-surname">Nome Cognome</label>
                                         <input class="form-control text-center" type="text" id="input-name-surname" name="userNameSurname" placeholder="Inserisci Nome e Cognome">
                                     </div>
                                 </div>
                                 <div class="col-4 d-flex justify-content-center">
                                     <div class="input-form">
-                                        <label class="mb-2 fs-5" for="user-kilometres">Km da percorrere</label>
+                                        <label class="mb-2 fs-5 text-black" for="user-kilometres">Km da percorrere</label>
                                         <input class="form-control text-center" type="number" id="user-kilometres" name="userKilometres" placeholder="Inserisci Km da percorrere">
                                     </div>
                                 </div>
                                 <div class="col-4 d-flex justify-content-center">
                                     <div class="input-form">
-                                        <label class="mb-2 fs-5" for="user-age">Fascia d'età</label>
+                                        <label class="mb-2 fs-5 text-black" for="user-age">Fascia d'età</label>
                                         <input class="form-control text-center" type="number" id="user-age" name="userAge" placeholder="Inserisci l'età">
                                     </div>
                                 </div>
                                 <div class="col-12 d-flex justify-content-center mt-5 gap-4">
-                                    <button type="button" id="button-generate" class="btn btn-primary fs-5">Genera</button>
-                                    <button type="button" id="button-cancel" class="btn btn-primary fs-5">Annulla</button>
+                                    <button type="button" id="button-generate" class="btn btn-primary fs-5 bg-black border-0">Genera</button>
+                                    <button type="button" id="button-cancel" class="btn btn-primary fs-5 bg-black border-0">Annulla</button>
                                 </div>
                             </div>
                         </div>
@@ -65,30 +68,34 @@
 
             <!-- Sezione biglietto stampato -->
             <section id="print-ticket">
-                <h2 class="text-white text-center mb-3">IL TUO BIGLIETTO</h2>
+                <h2 class="text-white text-center mb-3">IL TUO BIGLIETTO PER HOGWARTS</h2>
                 <div class="card ticket rounded-0 py-4 px-4">
-                    <h3 class="fs-4">DETTAGLIO PASSEGGERI</h3>
-                    <div class="card-body">
+                    <h3 class="fs-4 text-black">DETTAGLIO PASSEGGERI</h3>
+                    <div class="card-body text-white">
                         <div class="row">
-                            <div class="col-3">
-                                <h4 class="mb-3">NOME PASSEGGERO</h4>
-                                <div id="result-name-surname" class="fs-5"></div>
+                            <div class="col-3 br-black">
+                                <div class="img-barcode">
+                                    <img src="img/barcode.png" alt="barcode">
+                                </div>
+                                <h4 class="mb-2 text-black">NOME PASSEGGERO</h4>
+                                <div id="result-name-surname" class="fs-5 text-white"></div>
                             </div>
-                            <div class="col-3"> 
-                                <h5 class="">Offerta</h5>  
-                                <div id="type-ticket"></div>
+                        
+                            <div class="col-3 br-black"> 
+                                <h5>Offerta</h5>  
+                                <div id="type-ticket" class="fs-18"></div>
                             </div>
-                            <div class="col-2">
-                                <h5 class="">Carrozza</h5>  
-                                <div id="number-train"></div>
+                            <div class="col-2 br-black">
+                                <h5>Carrozza</h5>  
+                                <div id="number-train" class="fs-18"></div>
                             </div>
-                            <div class="col-2">
-                                <h5 class="">Codice CP</h5>  
-                                <div id="number-ticket"></div>
+                            <div class="col-2 br-black">
+                                <h5>Codice CP</h5>  
+                                <div id="number-ticket" class="fs-18"></div>
                             </div>
-                            <div class="col-2">
-                                <h5 class="">Costo Biglietto</h5>  
-                                <div id="result-price"></div>
+                            <div class="col-2 br-black">
+                                <h5>Costo Biglietto</h5>  
+                                <div id="result-price" class="fs-18"></div>
                             </div>
                         </div>
                     </div>

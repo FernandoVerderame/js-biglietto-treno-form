@@ -1,6 +1,13 @@
 /* ? Generics */
 body  {
-    background-color: #B91450;
+    background-image: url(/img/bg\ harry\ potter.jpg);
+    background-position: top;
+    background-size: 2100px;
+}
+
+img {
+    width: 100%;
+    display: inline;
 }
 
 h1 {
@@ -27,6 +34,15 @@ h5 {
     margin-bottom: 50px;
 }
 
+/* Utilities */
+.br-black {
+    border-right: 2px solid black;
+}
+
+.fs-18 {
+    font-size: 18px;
+}
+
 /* Form */
 form .input-form {
     text-align: center;
@@ -40,13 +56,35 @@ form label {
 /* ! Main */
 /* Sezione input ticket */
 .card.input-ticket {
+    background-color: #C49F4E;;
     padding: 20px 120px;
     border-radius: 15px;
+    position: relative;
+}
+
+.platform img {
+    width: 100px;
+    position: absolute;
+    left: 18px;
+    top: 72px;
 }
 
 /* Sezione biglietto stampato */
+.card.ticket {
+    background-color: #C49F4E;
+    position: relative;
+}
+
+.img-barcode img {
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+}
+
+
 .card.ticket .card-body {
-    background-color: #C49F4E;;
     height: 150px;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
