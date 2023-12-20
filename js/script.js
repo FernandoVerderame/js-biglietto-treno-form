@@ -13,7 +13,7 @@ let typeTicket = document.getElementById('type-ticket');
 // Mi metto in ascolto del click sul bottone
 buttonGenerate.addEventListener('click', function(){
     // Recupero il valore dall'input 
-    const userNameSurname = inputNameSurname.value;
+    const userNameSurname = inputNameSurname.value.trim();
     const userNumberKilometres = parseInt(inputKilometres.value);
     const userNumberAge = parseInt(inputAge.value); 
     const randomNumberTrain = Math.floor(Math.random() * 15) + 1;
@@ -22,7 +22,7 @@ buttonGenerate.addEventListener('click', function(){
     // Controllo scelta
     let errorMessage;
 
-    if (isNaN(userNumberKilometres) || isNaN(userNumberAge) || userNumberKilometres <= 0 || userNumberAge <= 0)
+    if ((!userNameSurname) || isNaN(userNumberKilometres) || isNaN(userNumberAge) || userNumberKilometres <= 0 || userNumberAge <= 0)
     errorMessage = 'Devi inserire un numero valido in entrambi i campi!';
 
     // Calcolare il prezzo totale del viaggio
@@ -51,23 +51,23 @@ buttonGenerate.addEventListener('click', function(){
         // Prezzo finale (con massimo due decimali)
         totalPrice = totalPrice.toFixed(2);
 
-        resultPrice.innerText = totalPrice;
+        resultPrice.innerText = '€' + totalPrice;
         resultNameSurname.innerText = userNameSurname;
         numberTrain.innerText = randomNumberTrain;
         numberTicket.innerText = randomNumberTicket;
-    }
-
-    buttonCancel.addEventListener('click', function(){
-
-        inputNameSurname.value = '';
-        inputKilometres.value = '';
-        inputAge.value = '';  
-        resultPrice.classList.add('d-none'); 
-        resultNameSurname.classList.add('d-none');      
-        numberTrain.classList.add('d-none');      
-        numberTicket.classList.add('d-none'); 
-        typeTicket.classList.add('d-none');          
-    })
-    
+    }    
 })
 
+
+// Aggancio il listener al click sul reset button
+buttonCancel.addEventListener('click', function(){
+
+    inputNameSurname.value = '';
+    inputKilometres.value = '';
+    inputAge.value = '';  
+    resultPrice.classList.add('d-none'); 
+    resultNameSurname.classList.add('d-none');      
+    numberTrain.classList.add('d-none');      
+    numberTicket.classList.add('d-none'); 
+    typeTicket.classList.add('d-none');          
+})
